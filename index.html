@@ -23,12 +23,24 @@
             --text-dark: #64748b;
         }
 
+        [data-theme="light"] {
+            --primary: #2563eb;
+            --secondary: #1e40af;
+            --accent: #1d4ed8;
+            --dark: #ffffff;
+            --darker: #f8fafc;
+            --light: #0f172a;
+            --text: #1e293b;
+            --text-dark: #64748b;
+        }
+
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             background: var(--darker);
             color: var(--text);
             line-height: 1.6;
             overflow-x: hidden;
+            transition: background-color 0.3s, color 0.3s;
         }
 
         /* Navigation */
@@ -41,6 +53,12 @@
             z-index: 1000;
             padding: 1.5rem 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: background-color 0.3s;
+        }
+
+        [data-theme="light"] nav {
+            background: rgba(248, 250, 252, 0.95);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         }
 
         .nav-container {
@@ -62,6 +80,7 @@
             display: flex;
             gap: 2rem;
             list-style: none;
+            align-items: center;
         }
 
         .nav-links a {
@@ -73,6 +92,27 @@
 
         .nav-links a:hover {
             color: var(--accent);
+        }
+
+        .theme-toggle {
+            background: none;
+            border: 2px solid var(--primary);
+            color: var(--text);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            font-size: 1.2rem;
+        }
+
+        .theme-toggle:hover {
+            background: var(--primary);
+            color: white;
+            transform: rotate(180deg);
         }
 
         .mobile-toggle {
@@ -109,6 +149,34 @@
             margin: 0 auto;
             position: relative;
             z-index: 1;
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-image {
+            flex: 0 0 auto;
+            order: -1;
+        }
+
+        .hero-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .profile-pic {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--primary);
+            box-shadow: 0 20px 60px rgba(37, 99, 235, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .profile-pic:hover {
+            transform: scale(1.05);
         }
 
         .hero-greeting {
@@ -121,7 +189,7 @@
             font-size: 4rem;
             font-weight: 800;
             margin-bottom: 1rem;
-            background: linear-gradient(135deg, #fff 0%, var(--accent) 100%);
+            background: linear-gradient(135deg, var(--text) 0%, var(--accent) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -206,15 +274,31 @@
 
         .experience-card {
             background: var(--dark);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(100, 116, 139, 0.2);
             border-radius: 12px;
             padding: 2rem;
             transition: all 0.3s;
+            display: flex;
+            gap: 1.5rem;
         }
 
         .experience-card:hover {
             border-color: var(--primary);
             transform: translateY(-4px);
+        }
+
+        .company-logo {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            border-radius: 8px;
+            background: white;
+            padding: 0.5rem;
+            flex-shrink: 0;
+        }
+
+        .experience-content {
+            flex: 1;
         }
 
         .experience-header {
@@ -228,7 +312,7 @@
 
         .experience-title {
             font-size: 1.5rem;
-            color: white;
+            color: var(--text);
             margin-bottom: 0.5rem;
         }
 
@@ -269,7 +353,7 @@
 
         .skill-category {
             background: var(--dark);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(100, 116, 139, 0.2);
             border-radius: 12px;
             padding: 2rem;
         }
@@ -336,13 +420,13 @@
 
         .timeline-content {
             background: var(--dark);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(100, 116, 139, 0.2);
             border-radius: 8px;
             padding: 1.5rem;
         }
 
         .timeline-content h4 {
-            color: white;
+            color: var(--text);
             margin-bottom: 0.5rem;
         }
 
@@ -360,20 +444,21 @@
 
         .education-card {
             background: var(--dark);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(100, 116, 139, 0.2);
             border-radius: 12px;
             padding: 2rem;
             text-align: center;
         }
 
-        .education-icon {
-            font-size: 3rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
+        .education-logo {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            margin: 0 auto 1rem;
         }
 
         .education-card h3 {
-            color: white;
+            color: var(--text);
             margin-bottom: 0.5rem;
         }
 
@@ -400,7 +485,7 @@
             text-align: center;
             padding: 2rem;
             background: var(--dark);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(100, 116, 139, 0.2);
             border-radius: 12px;
         }
 
@@ -411,7 +496,7 @@
         }
 
         .contact-item h3 {
-            color: white;
+            color: var(--text);
             margin-bottom: 0.5rem;
         }
 
@@ -434,7 +519,7 @@
             align-items: center;
             justify-content: center;
             background: var(--dark);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(100, 116, 139, 0.2);
             border-radius: 50%;
             color: var(--text);
             font-size: 1.5rem;
@@ -452,7 +537,7 @@
             background: var(--dark);
             text-align: center;
             padding: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(100, 116, 139, 0.2);
         }
 
         /* Responsive */
@@ -476,6 +561,20 @@
                 display: flex;
             }
 
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-image {
+                order: 0;
+            }
+
+            .profile-pic {
+                width: 200px;
+                height: 200px;
+            }
+
             .hero h1 {
                 font-size: 2.5rem;
             }
@@ -486,6 +585,14 @@
 
             .section-title {
                 font-size: 2rem;
+            }
+
+            .experience-card {
+                flex-direction: column;
+            }
+
+            .company-logo {
+                margin: 0 auto;
             }
         }
     </style>
@@ -502,6 +609,11 @@
                 <li><a href="#education">Education</a></li>
                 <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
             </ul>
             <div class="mobile-toggle" id="mobileToggle">
                 <i class="fas fa-bars"></i>
@@ -512,19 +624,25 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <h2>Senior Software Engineer</h2>
-            <p>
-                Experienced full-stack engineer specializing in scalable enterprise applications with React, TypeScript, Node.js, 
-                Java Spring Boot, and cloud technologies. Currently co-leading Agile development at SLK America Inc, delivering 
-                high-impact solutions that enhance system performance and user experience.
-            </p>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">
-                    Get In Touch <i class="fas fa-arrow-right"></i>
-                </a>
-                <a href="#experience" class="btn btn-secondary">
-                    View My Work
-                </a>
+            <div class="hero-image">
+                <img src="image/Profilepic.jpg" alt="Jayanth Somuri" class="profile-pic">
+            </div>
+            <div class="hero-text">
+                <h1>Jayanth Somuri</h1>
+                <h2>Senior Software Engineer</h2>
+                <p>
+                    Experienced full-stack engineer specializing in scalable enterprise applications with React, TypeScript, Node.js, 
+                    Java Spring Boot, and cloud technologies. Currently co-leading Agile development at SLK America Inc, delivering 
+                    high-impact solutions that enhance system performance and user experience.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        Get In Touch <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#experience" class="btn btn-secondary">
+                        View My Work
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -536,64 +654,76 @@
         
         <div class="experience-grid">
             <div class="experience-card">
-                <div class="experience-header">
-                    <div>
-                        <h3 class="experience-title">Senior Software Engineer</h3>
-                        <div class="experience-company">SLK America Inc, Cincinnati, OH</div>
+                <img src="image/Altimetrik.jpg" alt="SLK America Inc" class="company-logo">
+                <div class="experience-content">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-title">Senior Software Engineer</h3>
+                            <div class="experience-company">SLK America Inc, Cincinnati, OH</div>
+                        </div>
+                        <div class="experience-date">May 2025 - Present</div>
                     </div>
-                    <div class="experience-date">May 2025 - Present</div>
+                    <ul class="experience-highlights">
+                        <li>Co-leading Agile development alongside technical lead, collaborating with 5+ stakeholders and guiding 6-member offshore team</li>
+                        <li>Leading full-stack development using React, TypeScript, Node.js, Java Spring Boot, and GraphQL, achieving 30% increase in system usability</li>
+                        <li>Managing 100+ offshore pull requests across environments with DevOps practices, maintaining 1% rollback rate</li>
+                        <li>Architecting containerized microservices with Docker and deploying on AWS (EC2, S3, Lambda)</li>
+                    </ul>
                 </div>
-                <ul class="experience-highlights">
-                    <li>Co-leading Agile development alongside technical lead, collaborating with 5+ stakeholders and guiding 6-member offshore team</li>
-                    <li>Leading full-stack development using React, TypeScript, Node.js, Java Spring Boot, and GraphQL, achieving 30% increase in system usability</li>
-                    <li>Managing 100+ offshore pull requests across environments with DevOps practices, maintaining 1% rollback rate</li>
-                    <li>Architecting containerized microservices with Docker and deploying on AWS (EC2, S3, Lambda)</li>
-                </ul>
             </div>
 
             <div class="experience-card">
-                <div class="experience-header">
-                    <div>
-                        <h3 class="experience-title">Software Engineer</h3>
-                        <div class="experience-company">Fischer Homes, Cincinnati, OH</div>
+                <img src="image/FH.jpg" alt="Fischer Homes" class="company-logo">
+                <div class="experience-content">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-title">Software Engineer</h3>
+                            <div class="experience-company">Fischer Homes, Cincinnati, OH</div>
+                        </div>
+                        <div class="experience-date">Apr 2024 - May 2025</div>
                     </div>
-                    <div class="experience-date">Apr 2024 - May 2025</div>
+                    <ul class="experience-highlights">
+                        <li>Developed Sales CRM and enterprise applications using Angular, TypeScript, Node.js, Java Spring Boot, and GraphQL</li>
+                        <li>Integrated AI-driven feedback analysis with sentiment classification, boosting review ratings by 18%</li>
+                        <li>Optimized GraphQL queries with batching, enhancing performance and reducing response times by 25%</li>
+                        <li>Designed RESTful APIs with 99% reliability and upgraded Material-UI while implementing Redux state management</li>
+                    </ul>
                 </div>
-                <ul class="experience-highlights">
-                    <li>Developed Sales CRM and enterprise applications using Angular, TypeScript, Node.js, Java Spring Boot, and GraphQL</li>
-                    <li>Integrated AI-driven feedback analysis with sentiment classification, boosting review ratings by 18%</li>
-                    <li>Optimized GraphQL queries with batching, enhancing performance and reducing response times by 25%</li>
-                    <li>Designed RESTful APIs with 99% reliability and upgraded Material-UI while implementing Redux state management</li>
-                </ul>
             </div>
 
             <div class="experience-card">
-                <div class="experience-header">
-                    <div>
-                        <h3 class="experience-title">Software Developer</h3>
-                        <div class="experience-company">Technocolabs Software</div>
+                <img src="image/Technocolabs.jpg" alt="Technocolabs Software" class="company-logo">
+                <div class="experience-content">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-title">Software Developer</h3>
+                            <div class="experience-company">Technocolabs Software</div>
+                        </div>
+                        <div class="experience-date">Mar 2021 - Jul 2023</div>
                     </div>
-                    <div class="experience-date">Mar 2021 - Jul 2023</div>
+                    <ul class="experience-highlights">
+                        <li>Built e-commerce application with Java Spring Boot, Angular, and MySQL, improving user engagement by 30%</li>
+                        <li>Integrated enterprise APIs for real-time tracking using JWT authentication and Hibernate ORM</li>
+                        <li>Implemented real-time dashboards integrating MySQL with Power BI for data-driven insights</li>
+                    </ul>
                 </div>
-                <ul class="experience-highlights">
-                    <li>Built e-commerce application with Java Spring Boot, Angular, and MySQL, improving user engagement by 30%</li>
-                    <li>Integrated enterprise APIs for real-time tracking using JWT authentication and Hibernate ORM</li>
-                    <li>Implemented real-time dashboards integrating MySQL with Power BI for data-driven insights</li>
-                </ul>
             </div>
 
             <div class="experience-card">
-                <div class="experience-header">
-                    <div>
-                        <h3 class="experience-title">Research Intern – Software and AI</h3>
-                        <div class="experience-company">IIT Indore</div>
+                <img src="image/IIT Indore.jpg" alt="IIT Indore" class="company-logo">
+                <div class="experience-content">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-title">Research Intern – Software and AI</h3>
+                            <div class="experience-company">IIT Indore</div>
+                        </div>
+                        <div class="experience-date">Apr 2020 - Aug 2020</div>
                     </div>
-                    <div class="experience-date">Apr 2020 - Aug 2020</div>
+                    <ul class="experience-highlights">
+                        <li>Collaborated with Dr. Saurabh Das on deep learning forecasting models (RNN-LSTM, SARIMA, ARIMA)</li>
+                        <li>Achieved high accuracy with RMSE of 9 for sunspot prediction on non-stationary data</li>
+                    </ul>
                 </div>
-                <ul class="experience-highlights">
-                    <li>Collaborated with Dr. Saurabh Das on deep learning forecasting models (RNN-LSTM, SARIMA, ARIMA)</li>
-                    <li>Achieved high accuracy with RMSE of 9 for sunspot prediction on non-stationary data</li>
-                </ul>
             </div>
         </div>
     </section>
@@ -674,9 +804,7 @@
         
         <div class="education-grid">
             <div class="education-card">
-                <div class="education-icon">
-                    <i class="fas fa-graduation-cap"></i>
-                </div>
+                <img src="image/UC.png" alt="University of Cincinnati" class="education-logo">
                 <h3>University of Cincinnati</h3>
                 <div class="degree">Master of Science, Computer Engineering</div>
                 <div class="cgpa">CGPA: 3.80/4.0</div>
@@ -684,9 +812,7 @@
             </div>
 
             <div class="education-card">
-                <div class="education-icon">
-                    <i class="fas fa-graduation-cap"></i>
-                </div>
+                <img src="image/SRM.png" alt="SRM Institute" class="education-logo">
                 <h3>SRM Institute of Science and Technology</h3>
                 <div class="degree">Bachelor of Technology, Computer Science (IoT)</div>
                 <div class="cgpa">CGPA: 9.68/10.0 | University Gold Medal</div>
@@ -773,79 +899,4 @@
 
             <div class="contact-item">
                 <i class="fas fa-phone"></i>
-                <h3>Phone</h3>
-                <a href="tel:513-289-2293">513-289-2293</a>
-            </div>
-
-            <div class="contact-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <h3>Location</h3>
-                <p>Cincinnati, Ohio, USA</p>
-            </div>
-        </div>
-
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/jayanth-somuri-a6aa621a8/" target="_blank" title="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/Jayanthsomuri" target="_blank" title="GitHub">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://twitter.com/jayanth_somuri" target="_blank" title="Twitter">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://www.instagram.com/jayanthsomuri_939/" target="_blank" title="Instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 Jayanth Somuri. All rights reserved. Made with ❤️</p>
-    </footer>
-
-    <script>
-        // Mobile menu toggle
-        const mobileToggle = document.getElementById('mobileToggle');
-        const navLinks = document.getElementById('navLinks');
-
-        mobileToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            const icon = mobileToggle.querySelector('i');
-            icon.classList.toggle('fa-bars');
-            icon.classList.toggle('fa-times');
-        });
-
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                    navLinks.classList.remove('active');
-                    const icon = mobileToggle.querySelector('i');
-                    icon.classList.add('fa-bars');
-                    icon.classList.remove('fa-times');
-                }
-            });
-        });
-
-        // Navbar background on scroll
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 100) {
-                nav.style.background = 'rgba(15, 23, 42, 0.98)';
-            } else {
-                nav.style.background = 'rgba(15, 23, 42, 0.95)';
-            }
-        });
-    </script>
-</body>
-</html>
-
-
+                <h3>Phone
