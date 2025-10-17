@@ -1,356 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
-    <title>Portfolio </title>
-    <!--font awesome cdn link-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <!-- custome css link -->
+    <title>Jayanth Somuri | Senior Software Engineer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <!-- header section starts -->
-    <header>
-        <div class="user">
-            <img src="img/Prpfilepic.jpg" alt="">
-            <h3 class="name">Jayanth Somuri</h1>
-                <p class="post">Student|Web-developer|Coder|Tech-Enthusiast|Public Speaker</p>
-        </div>
-        <nav class="navbar">
-            <ul>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">JS</div>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">about</a></li>
-                <li><a href="#education">education</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#skills">Skills</a></li>
-                 <li><a href="#work">Certifications/Work</a></li> 
-                <li><a href="#contact">contact</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-        </nav>
-    </header>
-    <!-- Header section ends -->
-    <div id="menu" class="fas fa-bars"> </div>
-    <!-- home section starts -->
-
-    <section class="home" id="home">
-    <h3>HI THERE <img class="pic"
-            src="https://user-images.githubusercontent.com/1303154/88677602-1635ba80-d120-11ea-84d8-d263ba5fc3c0.gif"
-            width="28px" alt="hi"></h3>
-    <h1>I'M<span> Jayanth Somuri</span></h1>
-    <p>I'm a Software Engineer at Fischer Homes, specializing in enterprise application development and system integration. 
-    With a Master's in Computer Engineering from the University of Cincinnati (3.80/4.0) and a Bachelor's in Computer Science 
-    with IoT specialization (9.68/10.0), I bring strong technical expertise in full-stack development. My experience includes 
-    developing RESTful APIs, CRM systems, and e-commerce applications. I've received recognition for my research in AI, 
-    including a Best Paper Award for brain tumor prediction using deep neuroevolutionary techniques. My technical stack 
-    includes Python, Java, React, Angular, and cloud platforms like AWS and Docker. I'm passionate about creating efficient, 
-    scalable solutions that drive business growth and enhance user experience.</p>
-    
-    <a href="#about"><button class="btn"> about me <i class="fas fa-user"></i>
-        </button></a>
-</section>
-    <!-- home section ends -->
-
-    <!-- about section starts -->
-   <section class="about" id="about">
-    <h1 class="heading"><span>about</span> me</h1>
-    <div class="row">
-        <div class="info">
-            <h3><span>name:</span> Jayanth Somuri</h3>
-            
-            <h3><span>qualification:</span> MS Computer Engineering, University of Cincinnati (CGPA: 3.80/4.0)</h3>
-            
-            <h3><span>Technical Skills:</span>
-                <ul>
-                    <li>Proficient in Python, Java, C++, JavaScript, React, SQL, NodeJS, MongoDB, TypeScript, and Spring</li>
-                    <li>Expertise in .NET, Deep Learning, Machine Learning, CI/CD, SDLC, AWS, API Development, Docker, and Kubernetes</li>
-                    <li>Experience with development tools including Git, BitBucket, Jira, VS Code, Eclipse IDE, GCP, PyCharm, and Azure</li>
-                </ul>
-            </h3>
-
-            <h3><span>Research & Publications:</span>
-                <ul>
-                    <li>Published award-winning research on Brain Tumor Prediction using Deep Neuroevolutionary techniques</li>
-                    <li>Contributed to international conferences on IoT, Cloud Computing, and Data Science</li>
-                    <li>Experienced in developing AI models with CNN-LSTM and attention mechanisms</li>
-                </ul>
-            </h3>
-
-            <h3><span>Achievements:</span>
-                <ul>
-                    <li>University Academic Gold Medal from SRM University (2019-2023)</li>
-                    <li>Technical and Management Head at CHiPSET (Technical Club of SRM University)</li>
-                    <li>Best Paper Award at International Conference on IoT, Cloud, and Data Science</li>
-                </ul>
-            </h3>
-
-            <h3><span>Fun Fact:</span> Passionate about exploring the intersection of technology and data analytics in various domains!</h3>
-            
-            <a href="#"><button class="btn">download CV <i class="fas fa-download"></i></button></a>
+            <div class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-greeting">Hi there 👋, I'm</div>
+            <h1>Jayanth Somuri</h1>
+            <h2>Senior Software Engineer</h2>
+            <p>
+                Experienced full-stack engineer specializing in scalable enterprise applications with React, TypeScript, Node.js, 
+                Java Spring Boot, and cloud technologies. Currently co-leading Agile development at SLK America Inc, delivering 
+                high-impact solutions that enhance system performance and user experience.
+            </p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">
+                    Get In Touch <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#experience" class="btn btn-secondary">
+                    View My Work
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <h2 class="section-title">Professional Experience</h2>
+        <p class="section-subtitle">Building scalable solutions across the full stack</p>
         
-        <div class="counter">
-            <div class="box">
-                <img src="https://cdn.dribbble.com/users/1292677/screenshots/6139167/avento.gif" width="400"
-                    height="250" />
-            </div>
-        </div>
-    </div>
-</section>
-    <!-- about section ends -->
-    <!-- education section strts -->
-    <section class="education" id="education">
-    <h1 class="heading">My<span> education</span></h1>
-
-    <div class="box-container">
-        <div class="box">
-            <i class="fas fa-graduation-cap"></i>
-            <span>2023-2024</span>
-            <h3>Master of Science, Computer Engineering</h3>
-            <p>Currently pursuing MS in Computer Engineering at University of Cincinnati, Ohio, USA with a CGPA of 3.80/4.0.</p>
-        </div>
-
-        <div class="box">
-            <i class="fas fa-graduation-cap"></i>
-            <span>2019-2023</span>
-            <h3>Bachelor of Technology</h3>
-            <p>Completed B.Tech in Computer Science Engineering with IoT specialization from SRM Institute of Science and Technology, Chennai, India with an outstanding CGPA of 9.68/10.0.</p>
-        </div>
-
-        <div class="row">
-            <div class="column">
-                <img width="33%" height="110px" src="https://hack.codingblocks.com/_nuxt/img/d688d5e.gif" />
-            </div>
-            <div class="column">
-                <img src="https://i.pinimg.com/originals/a0/84/65/a08465fcb5cb830adfcbcc3ae9ea1116.gif" />
-            </div>
-            <div class="column">
-                <img src="https://cdn.dribbble.com/users/1876781/screenshots/6169542/web_character.gif" />
-            </div>
-        </div>
-    </div>
-</section>
-    <!-- education section ends -->
-
-    <!-- Skills section starts -->
-
-    <section class="skills" id="skills">
-        <h1 class="heading">My<span> skills</span> </h1>
-
-        <li>
-            <h3>C/C++</h3>
-            <span class="bar"><span class="clan">
-                </span></span>
-        </li>
-        <li>
-            <h3>Python</h3>
-            <span class="bar"><span class="Python">
-                </span></span>
-        </li>
-        <li>
-            <h3>html</h3>
-            <span class="bar"><span class="html">
-                </span></span>
-        </li>
-        <li>
-            <h3>css</h3>
-            <span class="bar"><span class="css">
-                </span></span>
-        </li>
-        <li>
-            <h3>Javascript</h3>
-            <span class="bar"><span class="Javascript">
-                </span></span>
-        </li>
-        <li>
-            <h3>MERN(Backend)</h3>
-            <span class="bar"><span class="MERN">
-                </span></span>
-        </li>
-        <li>
-            <h3>Mysql</h3>
-            <span class="bar"><span class="Mysql">
-                </span></span>
-        </li>
-
-
-    </section>
-    <!-- !-- skills section ends -->
-
-
-    <!--Works section begins-->
-
-    <section class="work" id="work">
-    <h1 class="heading">Experience<span> & Works</span> </h1>
-    <section id="certification">
-        <h1 id="certification-head">
-            <strong>Certifications & Work</strong></h1>
-        <div class="cd-main-content journey-style">
-            <div class="timeline">
-                <div class="line text-muted"></div>
-                 <div class="year-time">2021</div>
-                <article class="panel panel-default panel-outline date-extend">
-                    <div class="panel-heading icon">
+        <div class="experience-grid">
+            <div class="experience-card">
+                <div class="experience-header">
+                    <div>
+                        <h3 class="experience-title">Senior Software Engineer</h3>
+                        <div class="experience-company">SLK America Inc, Cincinnati, OH</div>
                     </div>
-                    <div class="panel-body">
-                        <h3>
-                            <span class="head">Web-Developer Intern,July 2021 (Technocolabs)</span>
-                        </h3>
-                        <span>Worked on Project (𝐑𝐞𝐭𝐚𝐢𝐥 𝐛𝐚𝐬𝐞𝐝 𝐁𝐮𝐬𝐢𝐧𝐞𝐬𝐬 𝐭𝐨 𝐁𝐮𝐬𝐢𝐧𝐞𝐬𝐬 𝐄𝐜𝐨𝐦𝐦𝐞𝐫𝐜𝐞 𝐖𝐞𝐛𝐬𝐢𝐭𝐞)
-                            </span>
-
-                    </div>
-                <div class="year-time">2020</div>
-                <article class="panel panel-default panel-outline date-extend">
-                    <div class="panel-heading icon">
-                    </div>
-                    <div class="panel-body">
-                        <h3>
-                          <span class="head">  Google Cloud, Nov 2020</span>
-                        </h3>
-                        <span>Google Cloud 30 days Challenge offered by QwuickLabs.
-                        </span>
-
-                    </div>
-                </article>
-                <div class="year-time">2020</div>
-                <article class="panel panel-default panel-outline date-extend">
-                    <div class="panel-heading icon">
-                    </div>
-                    <div class="panel-body">
-                        <h3>
-                            <span class="head">Serverless Computing using AWS Lambda, October 2020</span>
-                        </h3>
-                        <span>Completed this course offered by AWS.
-                            </span>
-
-                    </div>
-                </article>
-                <div class="year-time">2020</div>
-                <article class="panel panel-default panel-outline date-extend">
-                    <div class="panel-heading icon">
-                    </div>
-                    <div class="panel-body">
-                        <h3>
-                            <span class="head">Create Your First Chatbot with Rasa and Python, Sep 2020</span>
-                        </h3>
-                        <span>Completed this Python project on ChatBot Course Offered By Coursera
-                            </span>
-
-                    </div>
-                </article>
-                <div class="year-time">2020</div>
-                <article class="panel panel-default panel-outline date-extend">
-                    <div class="panel-heading icon">
-                    </div>
-                    <div class="panel-body">
-                        <h3>
-                            <span class="head">Front-End Developement, August 2020</span>
-                        </h3>
-                        <span>Completed HTML,CSS & Javascript course Offered By Udemy.
-                            </span>
-
-                    </div>
-                
-               
-                </article>
-                <div class="year-time">2020</div>
-                <article class="panel panel-default panel-outline date-extend">
-                    <div class="panel-heading icon">
-                    </div>
-                    <div class="panel-body">
-                        <h3>
-                            <span class="head">CHiPSET Technical member,July 2020</span>
-                        </h3>
-                        <span>Joined a Technical Club (CHiPSET), From SRM-RMP!
-                            </span>
-
-                    </div>
-                </article>
-               
-                </article>
-            </div>
-        </div>
-
-
-    </section>
-
-   
- 
-
-
-
-
-
-
-
-
-
-
-
-
-<!--Works section ends-->
-    <!--conatact section starts-->
-    <section class="contact" id="contact">
-        <h1 class="heading">Get in<span>Touch</span> </h1>
-        <div class="row">
-            <div class="content">
-                <h3 class="title">Connect me</h3>
-                <div class="info">
-                    <h3><i class="fas fa-envelope">jayanthsomuri9@gmail.com</i></h3>
-                    <h3><i class="fas fa-phone">7893541911</i></h3>
-                    <h3><i class="fas fa-map-marker-alt">Hyderabad,India -500070.</i></h3>
-
+                    <div class="experience-date">May 2025 - Present</div>
                 </div>
+                <ul class="experience-highlights">
+                    <li>Co-leading Agile development alongside technical lead, collaborating with 5+ stakeholders and guiding 6-member offshore team</li>
+                    <li>Leading full-stack development using React, TypeScript, Node.js, Java Spring Boot, and GraphQL, achieving 30% increase in system usability</li>
+                    <li>Managing 100+ offshore pull requests across environments with DevOps practices, maintaining 1% rollback rate</li>
+                    <li>Architecting containerized microservices with Docker and deploying on AWS (EC2, S3, Lambda)</li>
+                </ul>
+            </div>
 
-                <form action="">
-                    <input type="text" placeholder="name" class="box">
-                    <input type="email" placeholder="xyz@gmail.com" class="box">
-                    <input type="text" placeholder="message/queries" class="box">
-                    <textarea name="" id="" cols="30" rows="10" class="box message" placeholder="message"></textarea>
-                    <button type="submit" class="btn"> send <i class="fas fa-paper-plane"></i> </button>
-                </form>
+            <div class="experience-card">
+                <div class="experience-header">
+                    <div>
+                        <h3 class="experience-title">Software Engineer</h3>
+                        <div class="experience-company">Fischer Homes, Cincinnati, OH</div>
+                    </div>
+                    <div class="experience-date">Apr 2024 - May 2025</div>
+                </div>
+                <ul class="experience-highlights">
+                    <li>Developed Sales CRM and enterprise applications using Angular, TypeScript, Node.js, Java Spring Boot, and GraphQL</li>
+                    <li>Integrated AI-driven feedback analysis with sentiment classification, boosting review ratings by 18%</li>
+                    <li>Optimized GraphQL queries with batching, enhancing performance and reducing response times by 25%</li>
+                    <li>Designed RESTful APIs with 99% reliability and upgraded Material-UI while implementing Redux state management</li>
+                </ul>
+            </div>
 
+            <div class="experience-card">
+                <div class="experience-header">
+                    <div>
+                        <h3 class="experience-title">Software Developer</h3>
+                        <div class="experience-company">Technocolabs Software</div>
+                    </div>
+                    <div class="experience-date">Mar 2021 - Jul 2023</div>
+                </div>
+                <ul class="experience-highlights">
+                    <li>Built e-commerce application with Java Spring Boot, Angular, and MySQL, improving user engagement by 30%</li>
+                    <li>Integrated enterprise APIs for real-time tracking using JWT authentication and Hibernate ORM</li>
+                    <li>Implemented real-time dashboards integrating MySQL with Power BI for data-driven insights</li>
+                </ul>
+            </div>
 
+            <div class="experience-card">
+                <div class="experience-header">
+                    <div>
+                        <h3 class="experience-title">Research Intern – Software and AI</h3>
+                        <div class="experience-company">IIT Indore</div>
+                    </div>
+                    <div class="experience-date">Apr 2020 - Aug 2020</div>
+                </div>
+                <ul class="experience-highlights">
+                    <li>Collaborated with Dr. Saurabh Das on deep learning forecasting models (RNN-LSTM, SARIMA, ARIMA)</li>
+                    <li>Achieved high accuracy with RMSE of 9 for sunspot prediction on non-stationary data</li>
+                </ul>
             </div>
         </div>
     </section>
-     <!--conatact section ends-->
 
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 class="section-title">Technical Skills</h2>
+        <p class="section-subtitle">Technologies and tools I work with</p>
+        
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3><i class="fas fa-code"></i> Languages</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">TypeScript</span>
+                    <span class="skill-tag">Python</span>
+                </div>
+            </div>
 
-     <footer class="footer-area">
-        <div class="container">
-            
-                
-                    <h5 class="links">Follow me</h5>
-                    <div class="links1">
-                    <a href="https://www.instagram.com/jayanthsomuri_939/"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/jayanth-somuri-a6aa621a8/"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://twitter.com/jayanth_somuri"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.facebook.com/jayanth.somuri.7"><i class="fab fa-facebook"></i></a>
-                    <a href="https://github.com/Jayanthsomuri"><i class="fab fa-github"></i></a>
+            <div class="skill-category">
+                <h3><i class="fas fa-laptop-code"></i> Frontend</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Angular</span>
+                    <span class="skill-tag">Redux</span>
+                    <span class="skill-tag">Material-UI</span>
                 </div>
-                <div class="copyrights text-center">
-                    <p class="para">
-                        <br  color="white"/>
-                        Copyright ©2021 All rights reserved.<br> made by ❤️ Jayanth Somuri.
-                    </p>
+            </div>
+
+            <div class="skill-category">
+                <h3><i class="fas fa-server"></i> Backend</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">Spring Boot</span>
+                    <span class="skill-tag">GraphQL</span>
+                    <span class="skill-tag">REST APIs</span>
                 </div>
-            
+            </div>
+
+            <div class="skill-category">
+                <h3><i class="fas fa-database"></i> Databases</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">PostgreSQL</span>
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">Redis</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">AWS</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">Kubernetes</span>
+                    <span class="skill-tag">CI/CD</span>
+                    <span class="skill-tag">Terraform</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3><i class="fas fa-robot"></i> AI/ML</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">TensorFlow</span>
+                    <span class="skill-tag">PyTorch</span>
+                    <span class="skill-tag">Scikit-learn</span>
+                    <span class="skill-tag">NLP</span>
+                </div>
+            </div>
         </div>
-        </footer>
-   
+    </section>
 
+    <!-- Education Section -->
+    <section id="education">
+        <h2 class="section-title">Education</h2>
+        <p class="section-subtitle">Academic background and achievements</p>
+        
+        <div class="education-grid">
+            <div class="education-card">
+                <div class="education-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3>University of Cincinnati</h3>
+                <div class="degree">Master of Science, Computer Engineering</div>
+                <div class="cgpa">CGPA: 3.80/4.0</div>
+                <p style="color: var(--text-dark); margin-top: 0.5rem;">Aug 2023 - Dec 2024</p>
+            </div>
 
-    <!-- jquery cdn link -->
+            <div class="education-card">
+                <div class="education-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3>SRM Institute of Science and Technology</h3>
+                <div class="degree">Bachelor of Technology, Computer Science (IoT)</div>
+                <div class="cgpa">CGPA: 9.68/10.0 | University Gold Medal</div>
+                <p style="color: var(--text-dark); margin-top: 0.5rem;">2019 - 2023</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <h2 class="section-title">Certifications & Achievements</h2>
+        <p class="section-subtitle">Continuous learning and professional development</p>
+        
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-year">2024</div>
+                <div class="timeline-content">
+                    <h4>Best Paper Award - Brain Tumor Prediction</h4>
+                    <p>Published in Springer's Cyber Security and Intelligent Systems 2024. Research on Smart Hybrid Feature Analysis using Transfer Learning.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-year">2021</div>
+                <div class="timeline-content">
+                    <h4>Web Developer Intern - Technocolabs</h4>
+                    <p>Worked on Retail-based Business to Business E-commerce Website project</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-year">2020</div>
+                <div class="timeline-content">
+                    <h4>Google Cloud 30 Days Challenge</h4>
+                    <p>Completed comprehensive cloud computing training offered by Google Cloud via QuickLabs</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-year">2020</div>
+                <div class="timeline-content">
+                    <h4>Serverless Computing using AWS Lambda</h4>
+                    <p>Completed advanced serverless architecture course offered by AWS</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-year">2020</div>
+                <div class="timeline-content">
+                    <h4>Chatbot Development with Rasa and Python</h4>
+                    <p>Completed Python-based chatbot development course offered by Coursera</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-year">2020</div>
+                <div class="timeline-content">
+                    <h4>Front-End Development Certification</h4>
+                    <p>Completed comprehensive HTML, CSS & JavaScript course offered by Udemy</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-year">2020</div>
+                <div class="timeline-content">
+                    <h4>CHiPSET Technical Club</h4>
+                    <p>Joined as Technical Member at SRM University's premier technical club</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">Let's connect and discuss opportunities</p>
+        
+        <div class="contact-grid">
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <a href="mailto:jayanthsomuri9@gmail.com">jayanthsomuri9@gmail.com</a>
+            </div>
+
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <h3>Phone</h3>
+                <a href="tel:513-289-2293">513-289-2293</a>
+            </div>
+
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Location</h3>
+                <p>Cincinnati, Ohio, USA</p>
+            </div>
+        </div>
+
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/jayanth-somuri-a6aa621a8/" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/Jayanthsomuri" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://twitter.com/jayanth_somuri" target="_blank" title="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/jayanthsomuri_939/" target="_blank" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Jayanth Somuri. All rights reserved. Made with ❤️</p>
+    </footer>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-    <!-- js link -->
     <script src="script.js"></script>
 </body>
-
 </html>
-
