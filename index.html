@@ -8,6 +8,7 @@
   <meta property="og:title" content="Jayanth Somuri — Senior Engineer">
   <meta property="og:description" content="Backend, platform, and production AI. Monoliths to GraphQL services, automated release pipelines, and agents that run in production.">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="img/Profilepic.jpg">
   <meta name="theme-color" content="#F4F5F2" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#121417" media="(prefers-color-scheme: dark)">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233D3BB8'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,sans-serif' font-weight='700' font-size='28' fill='white'%3EJS%3C/text%3E%3C/svg%3E">
@@ -564,6 +565,31 @@
     }
     .footer-inner { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
 
+    /* ---------- Photos & logos ---------- */
+    .byline { display: flex; align-items: center; gap: 0.9rem; margin-bottom: 1.5rem; }
+    .byline .status { margin-bottom: 0; }
+    .avatar {
+      width: 56px; height: 56px; border-radius: 50%;
+      object-fit: cover; flex-shrink: 0;
+      border: 2px solid var(--surface);
+      box-shadow: 0 0 0 1px var(--line);
+      background: var(--accent-soft);
+    }
+    .role-head { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.1rem; }
+    .role-head .org { margin-bottom: 0; }
+    .logo {
+      width: 52px; height: 52px; flex-shrink: 0;
+      border-radius: 12px; object-fit: contain;
+      background: #fff; padding: 5px;
+      border: 1px solid var(--line);
+    }
+    .edu-list li { display: flex; gap: 1rem; align-items: flex-start; }
+    .contact-photo {
+      width: 96px; height: 96px; border-radius: 50%;
+      object-fit: cover; margin-bottom: 1.5rem;
+      border: 3px solid var(--surface); box-shadow: 0 0 0 1px var(--line);
+    }
+
     /* ---------- Responsive ---------- */
     @media (max-width: 960px) {
       .hero-grid { grid-template-columns: 1fr; }
@@ -651,7 +677,10 @@
     <section class="hero" id="top">
       <div class="wrap hero-grid">
         <div>
-          <p class="status">Senior Engineer at Altimetrik, Cincinnati</p>
+          <div class="byline">
+            <img class="avatar" src="img/Profilepic.jpg" alt="Portrait of Jayanth Somuri" width="56" height="56" onerror="this.remove()">
+            <p class="status">Senior Engineer at Altimetrik, Cincinnati</p>
+          </div>
           <h1>Jayanth<br>Somuri</h1>
           <p class="hero-statement">I take monoliths apart, own the path to production, and ship AI agents that actually run.</p>
           <p class="hero-sub">Senior software engineer with 4+ years across backend, platform, and production AI systems in enterprise CRM, homebuilding, and e-commerce. Comfortable across Java, Node.js, and React, with hands-on depth in agentic development, MCP tooling, and spec-driven engineering.</p>
@@ -811,8 +840,13 @@
           <li class="role">
             <div class="when">May 2025 – Present<br><span class="now">Current role</span></div>
             <div>
-              <h3>Senior Engineer, Product &amp; Platform Engineering</h3>
-              <p class="org">Altimetrik · Cincinnati, OH</p>
+              <div class="role-head">
+                <img class="logo" src="img/Altimetrik.jpg" alt="Altimetrik logo" width="52" height="52" loading="lazy" onerror="this.remove()">
+                <div>
+                  <h3>Senior Engineer, Product &amp; Platform Engineering</h3>
+                  <p class="org">Altimetrik · Cincinnati, OH</p>
+                </div>
+              </div>
               <ul class="points">
                 <li><b>AI agents in production.</b> Event-driven agent on Microsoft Graph webhooks and Azure Functions that reconciles user roles against CRM permissions in real time, removing 15+ hours/month of manual admin work.</li>
                 <li><b>Microservices decomposition.</b> Split a monolithic CRM into Spring Boot and Node.js services behind GraphQL, cutting latency 45% (800ms to 440ms) and raising test coverage from 52% to 84%.</li>
@@ -836,8 +870,13 @@
           <li class="role">
             <div class="when">Apr 2024 – May 2025</div>
             <div>
-              <h3>Software Engineer</h3>
-              <p class="org">Fischer Homes · Cincinnati, OH</p>
+              <div class="role-head">
+                <img class="logo" src="img/FH.jpg" alt="Fischer Homes logo" width="52" height="52" loading="lazy" onerror="this.remove()">
+                <div>
+                  <h3>Software Engineer</h3>
+                  <p class="org">Fischer Homes · Cincinnati, OH</p>
+                </div>
+              </div>
               <ul class="points">
                 <li><b>AI-driven scheduling.</b> Architected a predictive scheduling agent with Claude AI that analyzes appointment density and auto-resolves counselor conflicts before they reach customers.</li>
                 <li><b>CRM platform.</b> Sales and Land CRM features in Angular 12+ and React 18 on Spring Boot and Node.js services (REST and GraphQL), accelerating feature delivery 20%.</li>
@@ -857,8 +896,13 @@
           <li class="role">
             <div class="when">Mar 2021 – Jul 2023</div>
             <div>
-              <h3>Software Developer</h3>
-              <p class="org">Technocolabs Software · Remote</p>
+              <div class="role-head">
+                <img class="logo" src="img/Technocolabs.jpg" alt="Technocolabs Software logo" width="52" height="52" loading="lazy" onerror="this.remove()">
+                <div>
+                  <h3>Software Developer</h3>
+                  <p class="org">Technocolabs Software · Remote</p>
+                </div>
+              </div>
               <ul class="points">
                 <li><b>Full-stack e-commerce.</b> B2C platform on Node.js/Express, TypeScript, MongoDB, and React serving 5K+ daily active users; Redis caching and query optimization cut API response times 40%.</li>
                 <li><b>Payments and cart.</b> Razorpay integration for secure payments and a cart-state overhaul that keeps frontend sessions and database records in sync in real time.</li>
@@ -876,8 +920,13 @@
           <li class="role">
             <div class="when">Apr 2020 – Aug 2020</div>
             <div>
-              <h3>Research Intern, Software &amp; AI</h3>
-              <p class="org">IIT Indore · Indore, India</p>
+              <div class="role-head">
+                <img class="logo" src="img/IIT%20Indore.jpg" alt="IIT Indore logo" width="52" height="52" loading="lazy" onerror="this.remove()">
+                <div>
+                  <h3>Research Intern, Software &amp; AI</h3>
+                  <p class="org">IIT Indore · Indore, India</p>
+                </div>
+              </div>
               <ul class="points">
                 <li><b>Forecasting models.</b> RNN-LSTM, SARIMA, and ARIMA models in Python/TensorFlow for sunspot activity prediction, reaching an RMSE of 9 through tuning, under Dr. Saurabh Das.</li>
                 <li><b>Data engineering.</b> Cleaned decades of solar activity data, engineered time-series features, and benchmarked model variants to minimize forecasting error.</li>
@@ -920,13 +969,19 @@
             <p class="kind">Education</p>
             <ul class="edu-list">
               <li>
-                <h3>M.S., Computer Engineering</h3>
-                <p>University of Cincinnati · GPA 3.80/4.0</p>
+                <img class="logo" src="img/UC.png" alt="University of Cincinnati logo" width="52" height="52" loading="lazy" onerror="this.remove()">
+                <div>
+                  <h3>M.S., Computer Engineering</h3>
+                  <p>University of Cincinnati · GPA 3.80/4.0</p>
+                </div>
               </li>
               <li>
-                <h3>B.Tech., Computer Science and Engineering</h3>
-                <p>SRM Institute of Science and Technology · CGPA 9.70/10</p>
-                <p class="honor">University Gold Medal</p>
+                <img class="logo" src="img/SRM.png" alt="SRM Institute of Science and Technology logo" width="52" height="52" loading="lazy" onerror="this.remove()">
+                <div>
+                  <h3>B.Tech., Computer Science and Engineering</h3>
+                  <p>SRM Institute of Science and Technology · CGPA 9.70/10</p>
+                  <p class="honor">University Gold Medal</p>
+                </div>
               </li>
             </ul>
           </div>
@@ -957,6 +1012,7 @@
     <section class="contact" id="contact">
       <div class="wrap contact-grid">
         <div>
+          <img class="contact-photo" src="img/Profilepic.jpg" alt="" width="96" height="96" loading="lazy" onerror="this.remove()">
           <h2>Let's talk.</h2>
           <p class="lede">I'm interested in senior roles in platform, backend, and production AI. The fastest way to reach me is email.</p>
           <a class="mail" href="mailto:jayanthsomuri9@gmail.com">jayanthsomuri9@gmail.com</a>
